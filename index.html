@@ -21,116 +21,197 @@
       name="twitter:description"
       content="Check out my CV and Personal Presentation"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <style>
-    *,
+    :root {
+      --background-color: #0f172a;
+      --primary-color: #65a30d;
+      --layout-max-width: 512px;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 2.5rem;
+      --rounded: 0.375rem;
+      --line-height: 1.5;
+      --heading1: 1.5rem;
+      --heading2: 1.25rem;
+      --text-base: 1rem;
+    }
+
     body {
       font-family: "Courier New", Courier, monospace;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      margin: calc(var(--spacing-lg) * 2);
     }
+
+    a {
+      color: var(--primary-color);
+      line-height: var(--line-height);
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    h1 {
+      font-weight: normal;
+      font-size: var(--heading1);
+      line-height: 1.75rem;
+    }
+
+    svg {
+      vertical-align: middle;
+    }
+
+    footer {
+      font-size: calc(var(--text-base) * 0.9);
+    }
+
+    .heading small {
+      display: block;
+    }
+
+    .container {
+      max-width: var(--layout-max-width);
+      margin: 0 auto;
+    }
+
+    .box {
+      padding: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+      border: 1px solid var(--primary-color);
+      border-radius: var(--rounded);
+    }
+
+    .heading {
+      margin-bottom: var(--spacing-sm);
+      text-align: center;
+    }
+
     .animate-cursor {
+      margin-top: 0.5rem;
+      opacity: 1;
+      line-height: var(--line-height);
+      background-color: var(--primary-color);
+      width: calc(var(--spacing-md) / 3);
       animation: cursor 1s linear infinite;
     }
+
     @keyframes cursor {
       50% {
         opacity: 0;
       }
     }
   </style>
-  <body class="bg-slate-900 text-lime-600 m-10">
-    <div class="max-w-lg mx-auto">
-      <h1 class="text-xl mb-4 text-center">
-        <span class="text-2xl">Marcin Libelt</span><br />ReactJs Developer for
-        hire
-      </h1>
-      <div class="border rounded border-lime-600 p-4 mb-8">
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="heading">
+          Marcin Libelt <small>ReactJs Developer for hire</small>
+        </h1>
+      </header>
+      <main>
+        <div class="box">
+          <ul>
+            <li>
+              &gt;
+              <a
+                href="https://marcin-libelt.github.io/Marcin-Libelt-Presentation.pdf"
+                target="presentation"
+              >
+                Presentation</a
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="inline"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"
+                />
+              </svg>
+            </li>
+            <li>
+              &gt;
+              <a
+                href="https://marcin-libelt.github.io/Marcin-Libelt-CV.pdf"
+                target="cv"
+              >
+                Curriculum Vitae</a
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="inline"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"
+                />
+              </svg>
+            </li>
+            <li>
+              &gt;
+              <a
+                href="https://marcin-libelt.github.io/Marcin-Libelt-CV-pl.pdf"
+                target="cv"
+                >Curriculum Vitae (pl)</a
+              >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="inline"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"
+                />
+              </svg>
+            </li>
+          </ul>
+          <div class="animate-cursor">&nbsp;</div>
+        </div>
+      </main>
+      <footer>
         <ul>
           <li>
-            <a
-              href="https://marcin-libelt.github.io/Marcin-Libelt-Presentation.pdf"
-              target="presentation"
-              >&gt;&nbsp;<span class="underline hover:no-underline"
-                >Presentation</span
-              >
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="inline"
-              viewBox="0 0 16 16"
+            &gt;
+            <a href="https://www.linkedin.com/in/marcin-libelt-74ba2a57/"
+              >LinkedIn</a
             >
-              <path
-                fill-rule="evenodd"
-                d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"
-              />
-            </svg>
           </li>
           <li>
-            <a
-              href="https://marcin-libelt.github.io/Marcin-Libelt-CV.pdf"
-              target="cv"
-              >&gt;&nbsp;<span class="underline hover:no-underline"
-                >Curriculum Vitae</span
-              >
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="inline"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"
-              />
-            </svg>
+            &gt;
+            <a href="https://github.com/marcin-libelt">GitHub</a>
           </li>
           <li>
-            <a
-              href="https://marcin-libelt.github.io/Marcin-Libelt-CV-pl.pdf"
-              target="cv"
-              >&gt;&nbsp;<span class="underline hover:no-underline"
-                >Curriculum Vitae (pl)</span
-              >
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="inline"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"
-              />
-            </svg>
+            &gt;
+            <a href="mailto:marcin.libelt@gmail.com">E-mail</a>
+          </li>
+          <li>
+            &gt;
+            <a href="tel:0048785275027">Phone</a>
           </li>
         </ul>
-        <span class="animate-cursor w-3 mt-2 bg-lime-600 block">&nbsp;</span>
-      </div>
-      <ul>
-        <li>
-          <a href="https://www.linkedin.com/in/marcin-libelt-74ba2a57/"
-            >&gt;&nbsp;<span class="underline hover:no-underline"
-              >LinkedIn</span
-            ></a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/marcin-libelt"
-            >&gt;&nbsp;<span class="underline hover:no-underline"
-              >GitHub</span
-            ></a
-          >
-        </li>
-      </ul>
+      </footer>
     </div>
   </body>
 </html>
